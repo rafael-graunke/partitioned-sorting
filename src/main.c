@@ -56,7 +56,10 @@ int main(void) {
 
     //2 - Generate  
     // FILE *source = fopen("output/products.bin", "rb");
-    // int num_partitions = partition(source, sizeof(ProductEntry), cmp_products);
-    merge_files(46, sizeof(ProductEntry), min_products);
+    // int num_product_partitions = partition(source, sizeof(ProductEntry), cmp_products);
+    // int last_product_partition = merge_files(46, sizeof(ProductEntry), min_products);
 
+    merge_final_files(46, 58, sizeof(ProductEntry), min_products);
+
+    // merge_final_files(num_product_partitions, last_product_partition, sizeof(ProductEntry), min_products);
 }
